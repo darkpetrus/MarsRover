@@ -1,0 +1,42 @@
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.1/phpunit.xsd"
+         mapTestClassNameToCoveredClassName="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         verbose="true"
+         bootstrap="./vendor/autoload.php">
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+            <exclude>
+                <directory>./vendor</directory>
+                <directory>./test</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <testsuites>
+        <testsuite name="MarsRover">
+            <file>./test/Service/CommandFactoryTest.php</file>
+            <file>./test/Service/CommandsInputParserTest.php</file>
+            <file>./test/Model/Map/MapTest.php</file>
+            <file>./test/Model/Planet/PlanetTest.php</file>
+            <file>./test/Model/Direction/DirectionTest.php</file>
+            <file>./test/Model/Rover/RoverSetupTest.php</file>
+            <file>./test/Model/Rover/RoverTest.php</file>
+            <file>./test/Model/Rover/RoverSquadTest.php</file>
+            <file>./test/Model/Command/CommandCollectionTest.php</file>
+            <file>./test/Model/Command/MoveTest.php</file>
+            <file>./test/Model/Command/TurnLeftTest.php</file>
+            <file>./test/Model/Command/TurnRightTest.php</file>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type="coverage-html" target="test/_reports/coverage" charset="UTF-8" yui="true" highlight="true"
+             lowUpperBound="35" highLowerBound="70"/>
+        <log type="testdox-html" target="test/_reports/coverage/index.html"/>
+    </logging>
+</phpunit>
