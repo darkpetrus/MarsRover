@@ -1,9 +1,9 @@
-# Mars Rovers Squad
+# Mars Rovers TDD Test
 
 ## How to execute the program:
 `php index.php < stdin.txt`
 
-The output is the new position on Planet for each Rover on Squad.
+The output is the new position on Planet for each Rover.
 
 ## How to execute the program test suite:
 `make test`
@@ -39,7 +39,7 @@ You will be scored based on the following criteria:
 
 Notes:
 - Database usage is not required.
-- Usage of PHP version >= 5.3 is required.
+- Usage of PHP version >= 7.2 is required.
 
 ## Specification
 A squad of robotic rovers is to be landed by NASA on a planet on Mars.
@@ -51,7 +51,8 @@ representing one of the four cardinal compass points. The planet is divided up i
 simplify navigation. An example position might be 0, 0, N, which means the rover is in the
 bottom left corner and facing North.
 In order to control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R'
-and 'F'. 'L' and 'R' makes the rover spin 90 degrees left or right respectively, with moving
+and 'F'. 
+'L' and 'R' makes the rover spin 90 degrees left or right respectively, and moving forward
 from its current spot.
 'F' means move forward one grid point, and maintain the same heading.
 
