@@ -10,7 +10,7 @@ The output is the new position on Planet for each Rover.
 
 The output is the test results.  
 You can see the tests results as html in /test/_reports after run the `make test` command.  
-Please, install XDebug to get awesome code coverage html report in the same directory:
+Install XDebug to get report in the same directory:
 
 `sudo apt-get install php7.2-xdebug`
 
@@ -22,29 +22,13 @@ mars-rovers/test/_reports/coverage/dashboard.html
 
 ## Overview
 Purpose of this challenge is to enable you to demonstrate your proficiency in solving problems
-using software engineering tools and processes. Read the specification below and produce a
-solution.
-
-The problem specified below requires a solution that receives input, does some processing and
-then returns some output. You are free to implement any mechanism for feeding input into your
-solution. You should provide sufficient evidence that your solution is complete by, as a
-minimum, indicating that it works correctly against the supplied test data. Using a unit testing
-framework would satisfy these requirements.
-
-You will be scored based on the following criteria:
-- Your ability to read and interpret the specification below.
-- The architectural design of your solution.
-- The readability of your code.
-- Your overall approach to this exercise.
+using software engineering tools and processes. 
 
 Notes:
 - Database usage is not required.
 - Usage of PHP version >= 7.2 is required.
 
 ## Specification
-A squad of robotic rovers is to be landed by NASA on a planet on Mars.
-This planet, which is curiously rectangular, must be navigated by the rovers so that their on
-board cameras can get a complete view of the surrounding terrain to send back to Earth.
 
 A rover's position is represented by a combination of an x and y co-ordinates and a letter
 representing one of the four cardinal compass points. The planet is divided up into a grid to
@@ -53,7 +37,7 @@ bottom left corner and facing North.
 In order to control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R'
 and 'F'. 
 'L' and 'R' makes the rover spin 90 degrees left or right respectively, and moving forward
-from its current spot.
+from its current spot with the new heading.
 'F' means move forward one grid point, and maintain the same heading.
 
 Assume that the square directly North from (x, y) is (x, y+1).
